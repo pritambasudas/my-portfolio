@@ -8,7 +8,7 @@ export default function Home() {
           Pritam Das
         </h1>
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-          I build software, explore ideas, and enjoy turning complex problems into simple solutions.
+          I enjoy building thoughtful software, learning continuously, and working on ideas that have real impact.
         </p>
       </section>
 
@@ -21,8 +21,9 @@ export default function Home() {
           About
         </h2>
         <p className="text-gray-400 leading-relaxed max-w-3xl">
-          I’m a software engineer who enjoys working on meaningful projects, learning continuously, 
-          and improving systems over time. This portfolio is a snapshot of my work and journey.
+          I’m a software engineer who enjoys understanding how systems work end to end. 
+          I like building things carefully, improving them over time, and keeping designs simple.
+          This site is a place to share my work, experience, and experiments.
         </p>
       </section>
 
@@ -73,7 +74,7 @@ export default function Home() {
           Want to collaborate or just say hi?
         </p>
         <p className="text-gray-300">
-          pritam@example.com
+          pritambasudas@example.com
         </p>
       </section>
 
