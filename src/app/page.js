@@ -1,4 +1,13 @@
+"use client";
+
+import { useReveal } from "./useReveal";
+
 export default function Home() {
+  const about = useReveal();
+  const projects = useReveal();
+  const experience = useReveal();
+  const contact = useReveal();
+
   return (
     <main className="min-h-screen">
 
@@ -34,7 +43,10 @@ export default function Home() {
       {/* About */}
       <section
         id="about"
-        className="py-20 px-4 sm:px-6"
+        ref={about.ref}
+        className={`py-20 px-4 sm:px-6 transition-all duration-700
+          ${about.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+        `}
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-semibold mb-6">
@@ -51,7 +63,10 @@ export default function Home() {
       {/* Projects */}
       <section
         id="projects"
-        className="py-20 px-4 sm:px-6"
+        ref={projects.ref}
+        className={`py-20 px-4 sm:px-6 transition-all duration-700
+          ${projects.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+        `}
       >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-semibold mb-10">
@@ -59,7 +74,9 @@ export default function Home() {
           </h2>
 
           <div className="grid gap-6 sm:grid-cols-2">
-            <div className="border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition">
+            <div className="border border-gray-800 rounded-xl p-6
+                            transition-all duration-300
+                            hover:border-gray-600 hover:-translate-y-1">
               <h3 className="text-base sm:text-lg font-medium mb-2">
                 Project One
               </h3>
@@ -68,7 +85,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition">
+            <div className="border border-gray-800 rounded-xl p-6
+                            transition-all duration-300
+                            hover:border-gray-600 hover:-translate-y-1">
               <h3 className="text-base sm:text-lg font-medium mb-2">
                 Project Two
               </h3>
@@ -83,7 +102,10 @@ export default function Home() {
       {/* Experience */}
       <section
         id="experience"
-        className="py-20 px-4 sm:px-6"
+        ref={experience.ref}
+        className={`py-20 px-4 sm:px-6 transition-all duration-700
+          ${experience.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+        `}
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-semibold mb-6">
@@ -103,7 +125,10 @@ export default function Home() {
       {/* Contact */}
       <section
         id="contact"
-        className="py-24 px-4 sm:px-6 text-center"
+        ref={contact.ref}
+        className={`py-24 px-4 sm:px-6 text-center transition-all duration-700
+          ${contact.visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+        `}
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-semibold mb-4">
